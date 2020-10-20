@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run newsummariser.py
+web: sh setup.sh && streamlit run main.py
