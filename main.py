@@ -29,8 +29,8 @@ for row in range(0, count):
         article.download()
         article.parse()
         article.nlp()
-        st.markdown("""<h2 ><a style="color:#8000C4;font-weight:bold;font-family: montserrat;" href={} target=_blank>{}</a><p style="color:red;font-weight:bold;font-family: montserrat;margin-top:10px;">{}</p><img style='display: block;width: 50%;margin-left: auto;margin-right: auto;' src="{}"></h2>"""
-        .format(data['link'].iloc[row],data['title'].iloc[row],data['published'].iloc[row],article.top_image),unsafe_allow_html=True)
+        st.markdown("""<h2 style="color:red;font-weight:bold;font-family: montserrat;">{}. <a style="color:#8000C4;font-weight:bold;font-family: montserrat;" href={} target=_blank>{}</a><p style="color:red;font-weight:bold;font-family: montserrat;margin-top:10px;">{}</p><img style='display: block;width: 70%;margin-left: auto;margin-right: auto;' src="{}"></h2>"""
+        .format(row+1,data['link'].iloc[row],data['title'].iloc[row],data['published'].iloc[row],article.top_image),unsafe_allow_html=True)
         slot1=st.empty()
         slot2=st.empty()
         slot3=st.empty()
