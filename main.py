@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 import nltk
 from newspaper import Article
-import wget
 gn = GoogleNews()
 nltk.download('punkt')
 st.beta_set_page_config(
