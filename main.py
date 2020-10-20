@@ -19,6 +19,9 @@ count=st.sidebar.number_input("No. of Articles to display:",min_value=5,max_valu
 st.markdown("""<h1 style='font-family: montserrat;text-align:center;color:#8000C4;'>{} <span style='text-align:center;color:red;'>News Articles</span></h1>""".format(search_term),unsafe_allow_html=True)
 data_name=f"{search_term}_results.csv"
 data.to_csv(data_name,columns=["title","link","published"])
+st.sidebar.markdown(f"""<form method="get" action="{data_name}">
+   <button type="submit">Download data</button>
+</form>""",unsafe_allow_html=True)
 for row in range(0, count):
     url=data['link'].iloc[row]
     article=Article(url)
