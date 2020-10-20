@@ -1,0 +1,5 @@
+streamlit
+setuptools==45.2.0 
+pygooglenews==0.1.1
+newspaper3k
+nltk
